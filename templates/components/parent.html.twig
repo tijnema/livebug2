@@ -1,0 +1,7 @@
+<div {{ attributes }}>
+    <button data-action="live#$render">Rerender</button>
+    Rendered at: {{ date()|date('H:i:s') }}<br>
+    {% for i in 0..100 %}
+        {{ component('child', {number: i}) }}
+    {% endfor %}
+</div>
